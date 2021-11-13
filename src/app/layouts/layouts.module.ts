@@ -5,21 +5,16 @@ import { FooterComponent } from './footer/footer.component';
 import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
 import { DefaultLayoutComponent } from './default-layout/default-layout.component';
 import { RouterModule } from '@angular/router';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
+    DefaultLayoutComponent,
     HeaderComponent,
     FooterComponent,
-    MobileMenuComponent,
-    DefaultLayoutComponent,
-
+    MobileMenuComponent
   ],
   imports: [
     CommonModule,
-    RouterModule,
-    NgbModule,
-    FormsModule
+    RouterModule
   ]
 })
 export class LayoutsModule { }
