@@ -4,7 +4,7 @@ import { NavigationCancel, NavigationEnd, NavigationError, NavigationStart, Rout
 @Component({
   selector: 'app-root',
   template: '<router-outlet></router-outlet>',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ["../../node_modules/bootstrap/scss/bootstrap.scss"]
 })
 export class AppComponent {
   title = 'mysport';
