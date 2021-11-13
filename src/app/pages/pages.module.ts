@@ -1,21 +1,23 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { SharedModule } from '../shared/shared.module';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { LessonComponent } from './lesson/lesson.component';
+import { QuizComponent } from './quiz/quiz.component';
+import { JoinLessonComponent } from './lesson/join/join.component';
+import { JoinQuizComponent } from './quiz/join/join.component';
+import { PlatformComponent } from './platform/platform.component';
+import { FormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
-    HomeComponent,
+    LessonComponent,
+    QuizComponent,
+    JoinLessonComponent,
+    JoinQuizComponent,
+    PlatformComponent
   ],
   imports: [
-    NgbModule,
     CommonModule,
-    FormsModule,
-    RouterModule,
-    ReactiveFormsModule,
-    SharedModule
+    FormsModule
   ]
 })
 export class PagesModule { }
