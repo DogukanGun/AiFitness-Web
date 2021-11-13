@@ -6,7 +6,7 @@ import { DefaultLayoutComponent } from './layouts/default-layout/default-layout.
 import { ErrorComponent } from './shared/error/error.component';
 import { NotFoundComponent } from './shared/not-found/not-found.component';
 import { HomeComponent } from './pages/home/home.component';
-
+import { LayoutsModule } from './layouts/layouts.module';
 const routes: Routes =
   [
     {
@@ -50,8 +50,11 @@ const routes: Routes =
     }
   ];
 
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
-})
+  @NgModule({
+    imports: [
+      RouterModule.forRoot(routes, { scrollPositionRestoration: 'enabled' }),
+      LayoutsModule
+    ],
+    exports: [RouterModule]
+  })
 export class AppRoutingModule { }
