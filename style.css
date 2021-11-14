@@ -1,0 +1,58 @@
+.carouselImg {
+  height: 500px;
+  background: rgba(14, 81, 168, 0.363); /* #ccc*/
+  display: table;
+  width: 100%;
+}
+
+.carouselImg .imgOut {
+  vertical-align: middle;
+  display: table-cell;
+}
+
+.imgimg {
+  height: 500px;
+  background-size: contain !important;
+}
+
+.carousel-caption {
+  top: 150px;
+}
+
+.carouselText {
+  height: 500px;
+  background: #000;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+  background: none;
+  border: none;
+}
+
+.carousel-indicators li {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: solid 1px #fff;
+  background: transparent;
+}
+
+.carousel-indicators .active {
+  background: #fff;
+}
+
+.column {
+  height: 500px;
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+  background-size: contain !important;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
