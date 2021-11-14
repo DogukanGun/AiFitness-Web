@@ -10,13 +10,16 @@ import { MenuItem } from 'src/app/core/services/menu.service';
 })
 export class HeaderComponent implements OnInit {
 
+  nav_component_names = ['Home','How it works','Screenshots','Developers','Download','Contact us']
+
   constructor(private menuService: MenuService, private captionService: CaptionService) { }
   menuItems: MenuItem[] = [];
   isCollapseLogin = true;
   isCollapseRegister = true;
 
-  ngOnInit(): void {
 
+
+  ngOnInit(): void {
     this.menuItems = this.menuService.getMenuItems();
   }
   assignToggleType(name: string) {

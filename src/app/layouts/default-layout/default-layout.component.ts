@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./default-layout.component.scss']
 })
 export class DefaultLayoutComponent implements OnInit {
-
+  fakeArray = new Array(8);
   constructor() { }
 
   ngOnInit(): void {
