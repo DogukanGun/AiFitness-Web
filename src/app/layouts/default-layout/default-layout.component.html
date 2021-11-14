@@ -5,12 +5,7 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 
 <app-header></app-header>
-<div id="main-wrapper">
-  <router-outlet></router-outlet>
-  <br><br>
-  <app-developers></app-developers>
-  <div *ngFor="let i of fakeArray">
-    <br>
-  </div>
+<div style="background-color: #141414;" id="main-wrapper">
+  <router-outlet></router-outlet> 
 </div>
 <app-footer></app-footer>
