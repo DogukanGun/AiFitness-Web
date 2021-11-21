@@ -5,6 +5,7 @@ import { NgbCarouselConfig,NgbCarousel , NgbSlideEvent, NgbSlideEventSource } fr
   selector: 'app-corousel-slider',
   templateUrl: './corousel-slider.component.html',
   styleUrls: ['./corousel-slider.component.scss'],
+  providers: [NgbCarouselConfig]
 })
 export class CorouselSliderComponent implements OnInit {
 
