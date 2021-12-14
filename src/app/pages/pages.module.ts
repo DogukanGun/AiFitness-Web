@@ -6,12 +6,14 @@ import { HomeComponent } from './home/home.component';
 import { SharedModule } from '../shared/shared.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { DevelopersComponent } from './developers/developers.component';
+import { ContactComponent } from './contact/contact.component';
 import { CorouselSliderComponent } from './corousel-slider/corousel-slider.component';
 @NgModule({
   declarations: [
     HomeComponent,
     DevelopersComponent,
-    CorouselSliderComponent
+    CorouselSliderComponent,
+    ContactComponent
   ],
   imports: [
     NgbModule,
