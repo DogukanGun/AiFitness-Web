@@ -118,10 +118,6 @@ select::-ms-expand {
   display: none;
 }
 
-.subject {
-  width: 100%;
-}
-
 .telephone {
   width: 100%;
 }
@@ -171,7 +167,7 @@ textarea {
 }
 #form_button:hover {
   background: #f2f2f2;
-  color: #f2f2f2;
+  color: #242526;
 }
 @media screen and (max-width: 768px) {
   #container {

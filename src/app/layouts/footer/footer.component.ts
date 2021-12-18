@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
+  footer_elements = ['Home','Pricing','Privacy','Cookies','About','Contact']
   constructor() { }
 
   ngOnInit(): void {
