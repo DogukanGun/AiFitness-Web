@@ -1,4 +1,4 @@
-<div>
+<div id='header'>
     <nav>
       <div class="containter">
         <div class="wrapper">
@@ -7,9 +7,9 @@
           <input type="radio" name="slider" id="menu-btn">
           <input type="radio" name="slider" id="close-btn">
           <div>
-            <ul class="nav-links" *ngFor='let comp_name of nav_component_names'>
+            <ul class="nav-links" *ngFor='let item of nav_component_names'>
                 <!-- <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label> -->
-                <li><a href="#">{{comp_name}}</a></li>
+                <li><a href="{{item.href}}">{{item.name}}</a></li>
             </ul>
           </div>
           <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>

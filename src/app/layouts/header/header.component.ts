@@ -8,15 +8,22 @@ import { MenuItem } from 'src/app/core/services/menu.service';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit {
 
-  nav_component_names = ['Home','How it works','Screenshots','Developers','Download','Contact us']
+
+export class HeaderComponent implements OnInit {
+  
+  //nav_component_names = ['Home','How it works','Screenshots','Developers','Download','Contact us']
+  nav_component_names =   [new Item("Home","#header"), 
+                           new Item("How it works","#slider"), 
+                           new Item("Screenshots","#slider"), 
+                           new Item("Developers","#outer_developers"),
+                           new Item("Contact us","#container"), 
+                           new Item("Download","#download")];
 
   constructor(private menuService: MenuService, private captionService: CaptionService) { }
   menuItems: MenuItem[] = [];
   isCollapseLogin = true;
   isCollapseRegister = true;
-
 
 
   ngOnInit(): void {
@@ -50,4 +57,14 @@ export class HeaderComponent implements OnInit {
   isCaptionVisible() {
     return this.captionService.getCaptionStatus();
   }
+}
+
+interface Menu_item{
+  name: string;
+  href: string;
+};
+class Item implements Menu_item{
+  name = "";
+  href = "";
+  constructor(name: string, href: string){this.name = name;this.href = href;}
 }
