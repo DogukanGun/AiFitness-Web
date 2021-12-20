@@ -2,19 +2,17 @@
     <nav>
       <div class="containter">
         <div class="wrapper">
-          <div class="logo pl-5"><a href="#">AI Fitness Assistant</a></div>
-          <img class="titlelogo" src="../../../assets/upperbarlogo.svg">
+          <div class="logo pl-5"><a href="#">{{app_name}}</a></div>
+          <img class="titlelogo" src="{{upper_logo_path}}">
           <input type="radio" name="slider" id="menu-btn">
           <input type="radio" name="slider" id="close-btn">
           <div>
             <ul class="nav-links" *ngFor='let item of nav_component_names'>
-                <!-- <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label> -->
-                <li><a href="{{item.href}}">{{item.name}}</a></li>
+                <li><a href="#{{item.href}}">{{item.name}}</a></li>
             </ul>
           </div>
           <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
         </div>
       </div>
-      
     </nav>  
 </div>

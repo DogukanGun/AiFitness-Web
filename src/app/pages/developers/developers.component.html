@@ -1,26 +1,10 @@
-<div id='outer_developers' style="background-color: #242526;padding: 15px;">
-    <div class='col-lg-3 mt-5'>
-        <img src="../../../assets/img_avatar.png" id="image" /> 
-        <p id="text">Alper Temel</p> 
-        <p id="text">Researcher & Developer</p>
-        <a href="#"><i class="fas fa-globe"></i></a>
-        <a href="#"><i class="fab fa-linkedin"></i></a> 
-        <a href="#"><i class="fas fa-envelope"></i></a> 
-    </div>
-    <div class='col-lg-3 mt-5'>
-        <img src="../../../assets/img_avatar.png" id="image" /> 
-            <p id="text">Dogukan Ali Gundogan</p> 
-            <p id="text">Researcher & Developer</p> 
-            <a href="#"><i class="fas fa-globe"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fas fa-envelope"></i></a> 
-    </div>
-    <div class='col-lg-3 mt-5'>
-        <img src="../../../assets/img_avatar2.png" id="image" /> 
-        <p id="text">Ezgi Cetinkaya</p> 
-        <p id="text">Researcher & Developer</p> 
-        <a href="#"><i class="fas fa-globe"></i></a>
-        <a href="#"><i class="fab fa-linkedin"></i></a> 
-        <a href="#"><i class="fas fa-envelope"></i></a> 
+<div id='outer_developers'>
+    <div class='col-lg-3 mt-5' *ngFor='let person of persons' >
+        <img src="{{person.img_path}}" id="image" /> 
+        <p id="text">{{person.name}} {{person.surname}}</p> 
+        <p id="text">{{person.title}}</p> 
+        <a href="#{{person.hrefs[0]}}"><i class="{{developers_logos[0]}}"></i></a>
+        <a href="#{{person.hrefs[1]}}"><i class="{{developers_logos[1]}}"></i></a> 
+        <a href="#{{person.hrefs[2]}}"><i class="{{developers_logos[2]}}"></i></a> 
     </div>
 </div>  

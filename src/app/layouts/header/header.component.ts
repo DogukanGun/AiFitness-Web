@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { MenuService } from 'src/app/core/services/menu.service';
 import { CaptionService } from 'src/app/core/services/caption.service';
 import { MenuItem } from 'src/app/core/services/menu.service';
+import { constants } from 'src/app/constants';
+
 
 @Component({
   selector: 'app-header',
@@ -12,19 +14,16 @@ import { MenuItem } from 'src/app/core/services/menu.service';
 
 export class HeaderComponent implements OnInit {
   
-  //nav_component_names = ['Home','How it works','Screenshots','Developers','Download','Contact us']
-  nav_component_names =   [new Item("Home","#header"), 
-                           new Item("How it works","#slider"), 
-                           new Item("Screenshots","#slider"), 
-                           new Item("Developers","#outer_developers"),
-                           new Item("Contact us","#container"), 
-                           new Item("Download","#download")];
+  Constants = new constants();
+
+  nav_component_names = this.Constants.MENU_ITEMS;
+  app_name = this.Constants.APP_NAME;
+  upper_logo_path = this.Constants.UPPER_LOGO_PATH
 
   constructor(private menuService: MenuService, private captionService: CaptionService) { }
   menuItems: MenuItem[] = [];
   isCollapseLogin = true;
   isCollapseRegister = true;
-
 
   ngOnInit(): void {
     this.menuItems = this.menuService.getMenuItems();

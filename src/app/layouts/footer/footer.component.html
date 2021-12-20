@@ -1,20 +1,18 @@
 <footer class="footer-distributed">
-			<div class="footer-right">
-				<a href="#"><i class="fab fa-facebook"></i></a>
-				<a href="#"><i class="fab fa-twitter"></i></a>
-				<a href="#"><i class="fab fa-linkedin"></i></a>
-				<a href="#"><i class="fab fa-github"></i></a>
+			<div class="footer-right" *ngFor='let logo of footer_logos'>
+				<a href="{{logo.href}}"><i class="{{logo.name}}"></i></a>
 			</div>
 			<div class="footer-left">
-				<p class="footer-links">
-					<a class="link-1" href="#">Home</a>
+				<p class="footer-links" *ngFor='let item of footer_menu_items'>
+					<a class="link-1" href="{{item.href}}">{{item.name}}</a>
+					<!-- <a class="link-1" href="#">Home</a>
 					<a class="link-1" href="#">Pricing</a>
                     <a class="link-1" href="#">Privacy</a>
 					<a class="link-1" href="#">Cookies</a>
 					<a class="link-1" href="#">About</a>
-					<a class="link-1" href="#">Contact</a>
+					<a class="link-1" href="#">Contact</a> -->
 				</p>
-				<p style=' padding-top: 15px;'>aifitnessasistant.com © 2021</p>
+				<p class="cpy_name">{{copyright_name}}</p>
 			</div>
 </footer>
 
