@@ -1,5 +1,6 @@
 import { Component, OnInit ,ViewChild} from '@angular/core';
 import { NgbCarouselConfig,NgbCarousel , NgbSlideEvent, NgbSlideEventSource } from '@ng-bootstrap/ng-bootstrap';
+import { constants } from 'src/app/constants';
 
 @Component({
   selector: 'app-corousel-slider',
@@ -8,6 +9,10 @@ import { NgbCarouselConfig,NgbCarousel , NgbSlideEvent, NgbSlideEventSource } fr
   providers: [NgbCarouselConfig]
 })
 export class CorouselSliderComponent implements OnInit {
+
+  Constants = new constants();
+
+  slider_items = this.Constants.SLIDER_ITEMS;
 
   @ViewChild('carousel', { static: true })
   carousel!: NgbCarousel;
@@ -46,5 +51,12 @@ export class CorouselSliderComponent implements OnInit {
     if (this.pauseOnIndicator && !slideEvent.paused && slideEvent.source === NgbSlideEventSource.INDICATOR) {
       this.togglePaused();
     }
+    // console.log("SELAM",this.carousel.slides.first.id)
+    // console.log("SELAM2",this.carousel.activeId)
+    // carousel sondan başa dönmesi için first.id == activeId oldugu durumda, verdiğimiz süre kadar
+    // bekleterek active carouselin slidenın last olarak değiştirmek gerekiyor
   }
 }
+
+
+

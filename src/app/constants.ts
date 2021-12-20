@@ -53,6 +53,14 @@ export class constants{
     readonly CONTACT_TEXT_DES = "I'd like to chat about";
     readonly CONTACT_TEXT_SEND_MSG = "Send Message";
     readonly CONTACT_SHOW_LOGO = true;
+
+    // corousel-slider
+    readonly SLIDER_ITEMS = [new Image("../../../assets/iphone2.png",
+                                       "This app provides you some workouts and practice safe. Stay hit from the comfort of your home.",
+                                       "BECOME A PIONEER OF REVOLUTIONARY AI TECHNOLOGY"),
+                             new Image("../../../assets/İPHONEApp.PNG",
+                                       "During an exercise, an AI Fitness Asisstant can detect incorrect posture. App uses artificial intelligence to develop personalized training programs for each user.",
+                                       "Get a real time feedback of your workout via mobile application.")];
 }
 
 // For header
@@ -83,4 +91,19 @@ interface Person_item{
     hrefs = ["","",""];
     constructor(name: string, surname: string, title: string, img_path: string, hrefs: Array<string>)
     {this.name = name;this.surname = surname;this.title = title;this.img_path = img_path;this.hrefs = hrefs;}
+  }
+
+  // For Corousel-slider
+
+  interface image_item{
+    image_path: string;
+    description: string;
+    header: string;
+  };
+  class Image implements image_item{
+    image_path = "";
+    header = "";
+    description = "";
+    constructor(image_path: string, description: string, header: string){this.image_path = image_path;
+                this.description = description;this.header=header}
   }

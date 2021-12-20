@@ -1,46 +1,24 @@
 <div id='slider' class="container" style="margin-top: 150px;margin-bottom: 150px;">
     <br><br><br>
     <ngb-carousel #carousel [interval]="1000" [pauseOnHover]="pauseOnHover" [pauseOnFocus]="pauseOnFocus" (slide)="onSlide($event)">
-        <ng-template ngbSlide>
-          <div class="row">
-            <div class="col-12 col-lg-5 pr-0">
-                <div class="carouselImg">
-                    <div class="imgOut">
-                        <div class="imgimg"  style="background: url('../../../assets/iphone2.png') no-repeat center;"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-lg-7 pl-0">
-                <div class="carouselText">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>BECOME A PIONEER OF REVOLUTIONARY AI TECHNOLOGY</h5>
-                        <p>This app provides you some workouts and practice safe.</p>
-                        <p>Stay hit from the comfort of your home</p>
-                    </div>
-                </div>
-            </div>
-            </div>
-        </ng-template>
-        <ng-template ngbSlide>
+        <ng-template ngbSlide *ngFor='let item of slider_items'>
             <div class="row">
-                <div class="col-12 col-lg-5 pr-0">
-                    <div class="carouselImg">
-                        <div class="imgOut">
-                            <div class="imgimg"  style="background: url('../../../assets/İPHONEApp.PNG') no-repeat center;"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-lg-7 pl-0">
-                    <div class="carouselText">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Get a real time feedback of your workout via mobile application.</h5>
-                            <p>During an exercise, an AI Fitness Asisstant can detect incorrect posture</p>
-                            <p>App uses artificial intelligence to develop personalized training programs for each user.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </ng-template>
-        
+              <div class="col-12 col-lg-5 pr-0">
+                  <div class="carouselImg">
+                      <div class="imgOut">
+                          <div class="imgimg"  style="background: url({{item.image_path}}) no-repeat center;"></div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-12 col-lg-7 pl-0">
+                  <div class="carouselText">
+                      <div class="carousel-caption d-none d-md-block">
+                          <h5>{{item.header}}</h5>
+                          <p>{{item.description}}</p>
+                      </div>
+                  </div>
+              </div>
+              </div>
+          </ng-template>
     </ngb-carousel>
 </div>
